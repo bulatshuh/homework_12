@@ -1,0 +1,4 @@
+.pytest_cache/
+Otus_venv/
+.idea/
+__pycache__/
