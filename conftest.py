@@ -6,7 +6,7 @@ def pytest_addoption(parser):
     parser.addoption('--url', action='store', default='https://www.opencart.com',
                      help="Enter base url where you want to send request")
 
-    parser.addoption('--browser', action='store', default='opera',
+    parser.addoption('--browser', action='store', default='chrome',
                      help="Enter browser you want to use")
 
 
@@ -22,7 +22,7 @@ def browser(request):
     elif browser_name == 'opera':
         print('\nOpening Opera...')
         # you need to paster your path to opera driver
-        browser = webdriver.Chrome('')
+        browser = webdriver.Chrome('your path to driver')
     else:
         raise pytest.UsageError('--browser should be chrome, firefox, opera')
     yield browser
